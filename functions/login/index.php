@@ -36,9 +36,7 @@ if(isset($_POST['configure_login']))
 			fwrite ( $handle , "define('login_DB_pass','".$_POST['DB_pass']."');\n");
 		if($_POST['DB_name']!="")
 			fwrite ( $handle , "define('login_DB_name','".$_POST['DB_name']."');\n");
-		
-		fwrite ( $handle , "include(\"functions.php\");\n");
-						
+								
 		fwrite ( $handle , "?>");
 	}
 	catch (Exception $e)
@@ -51,6 +49,8 @@ if(isset($_POST['configure_login']))
 /*	Check if stuff is defined, otherwise ask for them!	*/
 /********************************************************/
 $defined=0;
+
+require_once("functions.php");
 	
 if(file_exists("config.php"))
 {
@@ -169,7 +169,7 @@ else
 		
 	//See that the admin is in the system
 	require_once("functions.php");
-	require_once("../../../../functions/string.php");
+	require_once("../../functions/string.php");
 	require_once("../../../../functions/password.php");
 	if(login_user_exist(login_ADMIN_HANDLE))
 	{

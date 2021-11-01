@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 
 /********************************/
@@ -37,19 +36,20 @@ function login_receive()
 
 function login_mysql_connect()
 {
-	$conn=@mysql_connect(login_DB_host, login_DB_user,login_DB_pass);
+	// $conn=mysql_connect(login_DB_host, login_DB_user,login_DB_pass);
+	$conn=mysql_connect(login_DB_host, login_DB_name, login_DB_user, login_DB_pass);
 	if (!$conn)
 	{
 		echo "<p>Login: MySQL-server is not working ".login_DB_host.", ".login_DB_user."</p>";
 		return NULL;
 	}
 
-	$databas=@mysql_select_db(login_DB_name);
-	if (!$databas)
-	{
-		echo "<p>Login: Database is not working</p>";
-		return NULL;
-	}
+	// $databas=@mysql_select_db(login_DB_name);
+	// if (!$databas)
+	// {
+		// echo "<p>Login: Database is not working</p>";
+		// return NULL;
+	// }
 	
 	// echo "<p>Login: Database is working</p>";
 	return $conn;

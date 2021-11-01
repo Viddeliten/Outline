@@ -13,7 +13,7 @@ require_once("../spam.php");
 require_once("../comment/func.php");
 //From Feedback
 require_once("func.php");
-require_once("../../../../functions/string.php");
+require_once("../../functions/string.php");
 
 //Connecta till databasen
 $conn=mysql_connect($hostaddress,$inlogname,$password)

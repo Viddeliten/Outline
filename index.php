@@ -9,6 +9,7 @@ include("functions/location/func.php");
 include("functions/person/func.php");
 include("functions/event/func.php");
 include("functions/gene/func.php");
+include("functions/login/functions.php");
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 
