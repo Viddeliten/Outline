@@ -1,0 +1,58 @@
+.nobullets, ul.menu li
+{
+	display: inline;
+}
+ul.menu, .nobullets
+{
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul.menu li a
+{
+	padding: 0.5em 2em;
+	margin: 1px;
+	background: #DAE8EC;
+	color: rgba(17, 77, 72, 1);
+	font-weight: 900;
+	text-decoration: none;
+}
+ul.menu li a:hover
+{
+	background: #E8ECDA;
+	color: rgba(77, 72, 17, 1);
+}
+.small
+{
+	
+}
+.small input
+{
+	font-size:75%;
+}
+.inline
+{
+	display: inline;
+}
+.blocker
+{
+	clear: both;
+}
+.tick
+{
+	display: inline;
+	padding: 5px;
+	float: left;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+.tick .property
+{
+	display: block;
+	font-size: 8;
+}
+
+.base_info
+{
+	margin-bottom: 20px;
+}
